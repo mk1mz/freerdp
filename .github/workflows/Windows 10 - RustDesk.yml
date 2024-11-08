@@ -20,3 +20,10 @@ jobs:
 
       - name: Time Counter
         run: python time.py
+        
+      - name: Keep session alive
+        run: |
+          while true; do
+            echo "Keeping session alive..."
+            sleep 300
+          done

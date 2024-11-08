@@ -22,8 +22,10 @@ jobs:
         run: python time.py
         
       - name: Keep session alive
-        run: |
-          while true; do
-            echo "Keeping session alive..."
-            sleep 300
-          done
+  run: |
+      while ($true) {
+          Write-Output "Keeping session alive..."
+          Start-Sleep -Seconds 300
+      }
+      shell: pwsh
+
